@@ -1,4 +1,4 @@
-package com.example.firebasetest;
+package com.example.firebasetest.realtimedatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,9 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.firebasetest.Model;
+import com.example.firebasetest.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/*
+* пример записи в базу данных реального времени Realtime Database
+* */
 public class MainActivity extends AppCompatActivity {
     EditText etName, etSecondName, etDescription;
     Button buttonSendDB;
@@ -31,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 String dicript = etDescription.getText().toString();
 
                 Model model = new Model(name, secondName, dicript);
-                myDBRef.push().setValue(model);
+                //myDBRef.setValue(model);//так происходит перезапись данных
+                myDBRef.push().setValue(model);//так происходит добавление данных
             }
         });
 
