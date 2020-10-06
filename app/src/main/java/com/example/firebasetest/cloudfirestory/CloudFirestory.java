@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.firebasetest.Model;
 import com.example.firebasetest.R;
@@ -76,6 +77,7 @@ public class CloudFirestory extends AppCompatActivity {
 
                 if (value != null && value.exists()) {
                     Log.d(TAG, "Current data: " + value.getData());
+                    Toast.makeText(getApplicationContext(), value.getData().toString(), Toast.LENGTH_SHORT).show();
                 } else {
                     Log.d(TAG, "Current data: null");
                 }
