@@ -8,9 +8,22 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvDB"
+    android:id="@+id/tvDB"
+    style="@android:style/Widget.Holo.Light.TextView"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:textSize="35sp"
+    android:textStyle="bold"
+    tools:text="0123456789" />
+
+    <EditText
+        android:id="@+id/etDBwrite"
         android:layout_width="match_parent"
-        android:layout_height="350dp"/>
+        android:layout_height="60dp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:hint="номер"
+        android:layout_marginTop="70dp"/>
 
     <Button
         android:id="@+id/btnSendDB2"
