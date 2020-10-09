@@ -7,30 +7,14 @@
     tools:context=".realtimedatabase.MainActivity"
     android:orientation="vertical">
 
-    <TextView
-    android:id="@+id/tvDB"
-    style="@android:style/Widget.Holo.Light.TextView"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:textSize="35sp"
-    android:textStyle="bold"
-    tools:text="0123456789" />
 
-    <EditText
-        android:id="@+id/etDBwrite"
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        android:hint="номер"
-        android:layout_marginTop="70dp"/>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnSendDB2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:text="записать в базу данных Cloud Firestore"
-        android:layout_gravity="center"/>
+
+    </FrameLayout>
 
 </LinearLayout>
