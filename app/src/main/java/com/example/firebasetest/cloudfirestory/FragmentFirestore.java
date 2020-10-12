@@ -42,6 +42,7 @@ public class FragmentFirestore extends Fragment {
     public static final String TAG = "myLog";
     View view;
     private TextView tvDB;
+    private TextView tvDB2;
     private EditText editText;
     private Button buttonSendDB2;
     private FirebaseFirestore dbFirestore;
@@ -123,6 +124,7 @@ public class FragmentFirestore extends Fragment {
     }
     private void init(){
         tvDB = view.findViewById(R.id.tvDB);
+        tvDB2 = view.findViewById(R.id.tvDB2);
         buttonSendDB2 = view.findViewById(R.id.btnSendDB2);
         editText = view.findViewById(R.id.etDBwrite);
     }
@@ -149,6 +151,7 @@ public class FragmentFirestore extends Fragment {
                     tvDB.append(value.getData().values().toArray()[1].toString());*/
                     Log.d(TAG, "Current data: " + value.getData());
                     tvDB.setText(value.getData().get("key").toString());
+                    tvDB2.setText(value.getData().get("key").toString());
                 } else {
                     Log.d(TAG, "Current data: null");
                 }
